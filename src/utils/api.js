@@ -26,6 +26,16 @@ class Http {
 				})
 	}
 	
+	passwordLogin(data) {
+		const url = 'api/password_login/';
+		return this.http.post(url, data)
+	}
+	
+	validUser(data) {
+		const url = 'api/valid_user/';
+		return this.http.post(url, data)
+	}
+	
 	getBanner() {
 		const url = 'api/banner';
 		return this.http.get(url)

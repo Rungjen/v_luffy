@@ -12,6 +12,7 @@ import {
 	Select,
 	DatePicker,
 	Carousel,
+	Slider,
 } from 'ant-design-vue';
 
 
@@ -26,3 +27,4 @@ Vue.use(FormModel)
 		.use(Modal)
 		.use(Menu)
 		.use(Carousel)
+		.use(Slider)

@@ -19,11 +19,9 @@
 				</a-menu-item>
 			</a-menu>
 			<div class="login-register">
-				<login class="login"></login>
+				<login class="login" :showLogin="showLogin"></login>
 			</div>
 		</div>
-		
-	
 	</div>
 
 </template>
@@ -33,8 +31,18 @@
 	
 	export default {
 		name: "RHeader",
+		data() {
+			return {
+				showLogin: false
+			}
+		},
 		components: {
 			Login,
+		},
+		methods: {
+			loginClick() {
+				this.showLogin = true
+			}
 		}
 	}
 </script>
@@ -65,13 +73,14 @@
 	}
 	
 	.login-register {
-		flex: 60%;
+		flex: 30%;
 	}
 	
 	.ant-menu-horizontal {
 		border: none;
 	}
-	.banner{
+	
+	.banner {
 		margin-top: 10px;
 	}
 
